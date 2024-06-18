@@ -12,7 +12,10 @@ function AsideBar() {
             className={`${styles.navigation_link} ${mulish.className}`}
             href="/"
           >
-            indiev
+            <div className={styles.logo_icon_container}>
+             
+            </div>
+            startpodcast
           </Link>
         </div>
         <div className={styles.sidebar_link_flex}>

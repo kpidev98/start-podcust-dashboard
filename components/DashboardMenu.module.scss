@@ -60,26 +60,6 @@
   cursor: pointer;
 }
 
-.menu_logo {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 42px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  margin-bottom: 70px;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 300ms ease;
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
 .closeButton {
   background: transparent;
   border: none;
@@ -117,4 +97,39 @@
 }
 .dashboard_menu_link_containers:hover .menu_links {
   transform: scale(1.1);
+}
+.navigation_link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 800;
+  line-height: normal;
+  transition: color 0.3s ease;
+  margin-bottom: 70px;
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media screen and (min-width: 1400px) {
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+}
+.logo_icon_container {
+  background-image: url("../public/assets/logo-podcust.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

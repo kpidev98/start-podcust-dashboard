@@ -47,7 +47,7 @@ const DashboardComponent = () => {
 
   return (
     <>
-      <MemberstackProtected
+      {/* <MemberstackProtected
         allow={{
           plans: [
             "pln_basic-plan-1515l09dz",
@@ -60,36 +60,36 @@ const DashboardComponent = () => {
           ],
         }}
         onUnauthorized={unathorizedRedirect}
-      >
-        <div className={styles.flex_container}>
-          <div className={styles.asidebar_container}>
-            <AsideBar />
-          </div>
-          <div className={styles.full_width}>
-            <div className={styles.header_container}>
-              <h1
-                className={`${styles.header_container_text} ${inter.className}`}
-              >
-                Dashboard
-              </h1>
+      > */}
+      <div className={styles.flex_container}>
+        <div className={styles.asidebar_container}>
+          <AsideBar />
+        </div>
+        <div className={styles.full_width}>
+          <div className={styles.header_container}>
+            <h1
+              className={`${styles.header_container_text} ${inter.className}`}
+            >
+              Dashboard
+            </h1>
 
-              <div className={styles.dashboard_burger_container}>
-                <button
-                  ref={buttonRef}
-                  onClick={handleProfileButtonClick}
-                  className={styles.profile_button}
-                ></button>
-                <DashboardBurgerMenu />
-              </div>
+            <div className={styles.dashboard_burger_container}>
+              <button
+                ref={buttonRef}
+                onClick={handleProfileButtonClick}
+                className={styles.profile_button}
+              ></button>
+              <DashboardBurgerMenu />
             </div>
           </div>
         </div>
-        {isModalOpen && (
-          <div ref={modalRef}>
-            <ProfileModalComponent />
-          </div>
-        )}
-      </MemberstackProtected>
+      </div>
+      {isModalOpen && (
+        <div ref={modalRef}>
+          <ProfileModalComponent />
+        </div>
+      )}
+      {/* </MemberstackProtected> */}
     </>
   );
 };

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./DashboardMenu.module.scss";
 import Link from "next/link";
 
-import { inter } from "@/app/fonts";
+import { inter, mulish } from "@/app/fonts";
 
 const DashboardBurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,14 +36,12 @@ const DashboardBurgerMenu = () => {
               <use href="/assets/icons.svg#icon-Close"></use>
             </svg>
           </button>
-          <Link href="/" className={styles.menu_logo}>
-            indiev
-            <div className={styles.logo_indiev}>
-              {" "}
-              <svg className={styles.logo_icon} width="25" height="25">
-                <use href="/assets/icons.svg#icon-logo-indiev"></use>
-              </svg>
-            </div>
+          <Link
+            className={`${styles.navigation_link} ${mulish.className}`}
+            href="/"
+          >
+            <div className={styles.logo_icon_container}></div>
+            startpodcast
           </Link>
           <div className={styles.menu_container}>
             <div className={styles.dashboard_menu_link_containers}>
