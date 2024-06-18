@@ -1,0 +1,120 @@
+.burgerMenu {
+  position: relative;
+  @media screen and (min-width: 1400px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    display: none;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    display: none;
+  }
+}
+.closeButton {
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+.burgerButton {
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: fill 300ms ease;
+  &:hover,
+  &:focus {
+    fill: #2d60ff;
+  }
+}
+
+.menuItems {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: rgb(132, 34, 195);
+  background: rgb(159, 75, 248);
+  background: radial-gradient(
+    circle,
+    rgba(159, 75, 248, 1) 0%,
+    rgba(240, 230, 246, 1) 100%
+  );
+
+  border-radius: 30px;
+  z-index: 999;
+
+  padding: 70px 60px;
+}
+
+.menu_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+
+  font-size: 20px;
+
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+
+.menu_logo {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 70px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+}
+.button_close {
+  fill: #fff;
+  transition: transform 300ms ease;
+  cursor: pointer;
+}
+.button_close:hover,
+.button_close:focus {
+  transform: scale(1.1);
+}
+.dashboard_menu_link_containers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
+  cursor: pointer;
+}
+.menu_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.navigation_icon {
+  fill: #fff;
+  transition: transform 300ms ease;
+}
+.dashboard_menu_link_containers:hover .navigation_icon {
+  transform: scale(1.1);
+}
+.dashboard_menu_link_containers:hover .menu_links {
+  transform: scale(1.1);
+}

@@ -1,0 +1,203 @@
+.navigation_link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 25px;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 900;
+  line-height: normal;
+  transition: transform 0.3s ease;
+  @media screen and (min-width: 1400px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 42px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 36px;
+  }
+}
+
+.navigation_link:hover {
+  transform: scale(1.05);
+}
+.link_signin {
+  color: #001a49;
+
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: none;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 21.333px;
+    display: block;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 18px;
+    display: block;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 16px;
+    display: block;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+  &:hover,
+  &:focus {
+    color: #7b5be9;
+  }
+  cursor: pointer;
+}
+
+.navigation_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 44px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  padding: 10px 15px;
+
+  font-weight: 700;
+  line-height: normal;
+  background: linear-gradient(44deg, #cd10ff 15.75%, #9f06ff 84.63%);
+  transition: box-shadow 300ms ease;
+  cursor: pointer;
+  display: none;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 20px 0px rgba(0, 11, 255, 0.35);
+  }
+  @media screen and (min-width: 1400px) {
+    width: fit-content;
+
+    font-size: 21.333px;
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: fit-content;
+
+    font-size: 16px;
+    display: flex;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: fit-content;
+
+    font-size: 14px;
+    display: flex;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+
+.navigation_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation_button_container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    gap: 15px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    gap: 12px;
+  }
+}
+.link_signin_dashboard {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  text-align: center;
+
+  font-weight: 400;
+  line-height: normal;
+  background: #3818d9;
+  transition: transform 300ms ease;
+  cursor: pointer;
+  display: none;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: 1400px) {
+    font-size: 21.333px;
+    display: block;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+    display: block;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 14px;
+    display: block;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.logo_icon {
+  width: 15px;
+  height: 15px;
+  @media screen and (min-width: 1400px) {
+    width: 27px;
+    height: 27px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 23px;
+    height: 23px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 23px;
+    height: 23px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.modal_login_link {
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.sign_out_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-direction: row-reverse;
+}
+.sign_out {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

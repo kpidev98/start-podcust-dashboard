@@ -1,0 +1,402 @@
+.option_button_yes {
+  color: #1c08ff;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+
+  border-radius: 44px;
+  border: 1px solid #1c08ff;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.option_button_no {
+  color: #1c08ff;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33.056px;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1400px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+.options_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.disabledButton {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.step8_input_upload_form_button {
+  background: transparent;
+  border: 1px solid #1c08ff;
+  border-radius: 44px;
+  padding: 10px 30px;
+  color: #1c08ff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 7px 25px;
+  transition: transform 300ms ease;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  @media screen and (min-width: 1400px) {
+    padding: 10px 30px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    padding: 10px 30px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    padding: 10px 30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.step8_icon_upload_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.step8_upload_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.step8_icon_upload {
+  fill: #1c08ff;
+}
+
+.step8_icon_plus {
+  fill: #fff;
+}
+.step8_error_message {
+  font-size: 10px;
+  color: red;
+  margin-bottom: 10px;
+}
+.step6_soundtreck_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+}
+.step6_selected {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1400px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+.upload_form_list {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 1400px) {
+    width: 600px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 600px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 600px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.upload_form_item {
+  padding: 5px;
+  width: 100%;
+  border-bottom: 1px solid #ebeff2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 12px;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+.upload_form_item_text {
+  max-width: 150px;
+  white-space: normal; /* Забороняє перенос тексту на новий рядок */
+  overflow: hidden; /* Обрізає текст, який виходить за межі */
+  text-overflow: ellipsis;
+  @media screen and (min-width: 1400px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    max-width: 100%;
+  }
+  @media screen and (min-width: 400px) and (max-width: 575px) {
+    max-width: 180px;
+  }
+}
+.upload_form_item_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.upload_form_button_delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+.erorr_uploading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: 800;
+  padding: 2px 5px;
+  border: 1px solid red;
+  font-size: 13px;
+  border-radius: 3.02px;
+}
+.menu_upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background: #fff;
+}
+.menu_upload_button {
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  width: 89px;
+  padding: 10px 25px;
+
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(28, 8, 255, 0.1);
+  }
+  @media screen and (min-width: 1400px) {
+    width: 108px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 108px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 90px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.menu_upload_button_reload {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.menu_upload_button_delete {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.loader {
+  width: 50px;
+  height: 50px;
+}
+.upload_form_list_link {
+  margin-bottom: 50px;
+}
+.step8_icon_upload_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.step8_upload_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.step8_icon_upload {
+  fill: #1c08ff;
+}
+.upload_form_label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 33.056px;
+  border-radius: 44px;
+  background: #3818d9;
+  cursor: pointer;
+  border: none;
+  padding: 2px 15px;
+  transition: box-shadow 300ms ease;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 11, 255, 0.35);
+  }
+  @media screen and (min-width: 1400px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    margin-right: auto;
+  }
+}
+.step8_input_upload_form {
+  display: none;
+}
+.upload_form_label:hover .soundtrack_icon {
+  fill: #1c08ff;
+  transform: scale(1.1);
+}
+.soundtrack_icon {
+  transition: fill 300ms ease, transform 300ms ease;
+}
+.upload_form_label_text {
+  text-align: center;
+  font-size: 14px;
+  @media screen and (min-width: 1400px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+.upload_menu_elips_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  @media screen and (min-width: 1400px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.step8_loader_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}

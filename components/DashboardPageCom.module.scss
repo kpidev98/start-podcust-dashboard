@@ -1,0 +1,116 @@
+.flex_container {
+  display: flex;
+  flex-direction: row;
+}
+.header_container {
+  background: #fff;
+  padding: 25px 44px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.full_width {
+  width: 100%;
+}
+.header_container_text {
+  color: #343c6a;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  @media screen and (min-width: 1400px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+.asidebar_container {
+  min-height: 100vh;
+
+  @media screen and (min-width: 1400px) {
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+.dashboard_burger_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.create_project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  @media screen and (min-width: 1400px) {
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+  @media screen and (max-width: 991px) {
+  }
+}
+.create_project_link {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 44px;
+  background: #3818d9;
+  padding: 15px 65px;
+  cursor: pointer;
+  transition: box-shadow 300ms ease;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 11, 255, 0.35);
+  }
+  @media screen and (min-width: 1400px) {
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    padding: 22px 92px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 15px 70px;
+  }
+  @media screen and (max-width: 991px) {
+  }
+}
+.profile_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0.5px solid rgb(81, 79, 79);
+  background-color: #fff;
+  cursor: pointer;
+  background-image: url("../public/assets/profile_2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

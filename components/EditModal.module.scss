@@ -1,0 +1,787 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 50px 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: scroll;
+  @media screen and (min-width: 1400px) {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    max-width: 70%;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    max-width: 80%;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    max-width: 60%;
+  }
+}
+.modal::-webkit-scrollbar {
+  width: 8px; /* ширина скролбару */
+}
+
+.modal::-webkit-scrollbar-track {
+  background: #f1f1f1; /* колір фону скролбару */
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background: rgb(192, 191, 191); /* колір самого скролбару */
+  border-radius: 4px; /* радіус кутів скролбару */
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background: rgb(128, 127, 127); /* колір скролбару при наведенні */
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #888;
+  transition: color 300ms ease;
+  &:hover {
+    color: #3818d9;
+  }
+  @media screen and (min-width: 1400px) {
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+}
+.project_id {
+  color: #979797;
+  font-size: 12px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1400px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.modal_type {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 800;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+
+.modal_span {
+  color: #3818d9;
+}
+.step1_select {
+  text-align: center;
+  font-size: 14px;
+
+  width: 150px;
+  border-radius: 44px;
+  padding: 5px;
+  outline: none;
+  border: 1.93px solid #dfeaf2;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  @media screen and (min-width: 1400px) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    width: 200px;
+  }
+}
+.modal_title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 800;
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.title_input {
+  font-size: 14px;
+  border: 1.93px solid #dfeaf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 44px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 10px;
+
+  outline: none;
+  width: 150px;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  @media screen and (min-width: 1400px) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    width: 200px;
+  }
+}
+.modal_description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 800;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+
+.description_input {
+  font-size: 14px;
+  padding: 5px;
+  width: 180px;
+  min-height: 100px;
+  outline: none;
+  transition: box-shadow 300ms ease;
+  border: 1.93px solid #dfeaf2;
+  border-radius: 5px;
+  resize: none;
+
+  &:hover {
+    box-shadow: 0px 4px 20px 0px #9bc1f9;
+  }
+  @media screen and (min-width: 1400px) {
+    font-size: 14px;
+    height: 150px;
+    width: 550px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 14px;
+    height: 150px;
+    width: 550px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 320px;
+    font-size: 14px;
+    height: 150px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    width: 200px;
+  }
+}
+.flex_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1400px) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.modal_time {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.step3_range {
+  cursor: pointer;
+  width: 180px;
+  @media screen and (min-width: 1400px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 300px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 270px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    width: 200px;
+  }
+}
+.modal_format {
+  font-size: 14px;
+  font-weight: 800;
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.modal_links {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: start;
+  width: 100%;
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    text-align: start;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.modal_span_links {
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  max-width: 180px; /* Задайте бажаний максимальний розмір */
+  overflow-wrap: break-word;
+  margin-top: 10px;
+  @media screen and (min-width: 1400px) {
+    max-width: 100%;
+    overflow-wrap: normal;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    max-width: 100%;
+    overflow-wrap: normal;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    max-width: 100%;
+    overflow-wrap: normal;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    max-width: 100%;
+    overflow-wrap: normal;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    max-width: 320px;
+    overflow-wrap: normal;
+    align-items: center;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    max-width: 200px;
+    overflow-wrap: normal;
+    align-items: center;
+  }
+}
+.modal_span_links_a {
+  color: #3818d9;
+  max-width: 180px;
+  overflow-wrap: break-word;
+  @media screen and (min-width: 1400px) {
+    max-width: 700px;
+    overflow-wrap: break-word;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    max-width: 600px;
+    overflow-wrap: break-word;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    max-width: 320px;
+    overflow-wrap: break-word;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    max-width: 320px;
+    overflow-wrap: break-word;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    max-width: 320px;
+    overflow-wrap: break-word;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    max-width: 230px;
+    overflow-wrap: break-word;
+  }
+}
+.modal_span_links_short {
+  display: block;
+  font-size: 14px;
+  max-width: 180px;
+  overflow-wrap: break-word;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+    max-width: 700px;
+    overflow-wrap: normal;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+    max-width: 600px;
+    overflow-wrap: normal;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    max-width: 320px;
+    overflow-wrap: normal;
+    text-align: start;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    max-width: 320px;
+    overflow-wrap: normal;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    max-width: 320px;
+    overflow-wrap: normal;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    max-width: 200px;
+    overflow-wrap: break-word;
+  }
+}
+.link_input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  border-radius: 44px;
+  padding: 5px;
+  outline: none;
+  transition: box-shadow 300ms ease;
+  border: 1.93px solid #dfeaf2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  @media screen and (min-width: 1400px) {
+    width: 80%;
+    margin-bottom: 30px;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 80%;
+    margin-bottom: 30px;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 80%;
+    margin-bottom: 30px;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 320px;
+  }
+  @media screen and (min-width: 375px) and (max-width: 575px) {
+    width: 200px;
+  }
+}
+.add_link_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 33.056px;
+  border-radius: 44px;
+  background: #3818d9;
+  cursor: pointer;
+  border: none;
+  padding: 2px 15px;
+  transition: box-shadow 300ms ease;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 11, 255, 0.35);
+  }
+  @media screen and (min-width: 1400px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    margin-right: auto;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    margin-right: auto;
+  }
+}
+.modal_soundtrack {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.step8_button_container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  @media screen and (min-width: 1400px) {
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.step2_button {
+  color: #fff;
+  width: 108px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33.056px;
+  border-radius: 44px;
+  background: #3818d9;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  &:hover {
+    box-shadow: 0px 4px 20px 0px rgba(0, 11, 255, 0.35);
+  }
+  display: block;
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+    padding: 12px 45px;
+    width: 190px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 18px;
+    padding: 10px 40px;
+    width: 170px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 16px;
+    padding: 10px 40px;
+    width: 160px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 14px;
+    padding: 8px 30px;
+    width: 130px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 7px 25px;
+    width: 120px;
+  }
+}
+.modal_upload {
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 30px;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+
+.modalContent {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  @media screen and (min-width: 1400px) {
+    gap: 50px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    gap: 40px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    gap: 40px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.time_format_container {
+  @media screen and (min-width: 1400px) {
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.links_list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.soundtrack_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.soundtrack_container {
+  margin-bottom: 20px;
+}
+.soundtrack_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+.calendar_container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  align-items: center;
+}
+.flex_container_upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.uploaded_list_title {
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.modal_firs_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.step8_loader_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.disabled {
+  opacity: 0.5; /* Зменшення прозорості для відображення кнопки як вимкненої */
+  cursor: not-allowed; /* Заборона курсора на кнопці */
+  /* Інші стилі, які ви хочете застосувати до вимкнутої кнопки */
+}

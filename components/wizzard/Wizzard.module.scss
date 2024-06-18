@@ -1,0 +1,128 @@
+.wizzard_main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wizzard_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  margin-bottom: 70px;
+  @media screen and (min-width: 1400px) {
+    width: 80%;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 80%;
+    gap: 30px;
+    margin-bottom: 25px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 80%;
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 80%;
+    gap: 20px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    gap: 15px;
+  }
+}
+
+.wizzard_item {
+  font-size: 8px;
+  width: 22px;
+  height: 22px;
+
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #ccc;
+  color: black;
+  @media screen and (min-width: 1400px) {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 25px;
+    height: 25px;
+    font-size: 8px;
+  }
+  @media screen and (min-width: 400px) and (max-width: 575px) {
+    width: 25px;
+    height: 25px;
+  }
+}
+.wizzard_item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100%); /* Відстань між кроками */
+  width: 10px; /* Довжина лінії */
+  height: 1px; /* Товщина лінії */
+  background-color: #ccc; /* Колір лінії */
+  transform: translateY(-50%);
+  @media screen and (min-width: 1400px) {
+    height: 2.5px;
+    width: 42px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    height: 2px;
+    width: 40px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    height: 2px;
+    width: 30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    height: 2px;
+    width: 21px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 16px;
+  }
+}
+
+.wizzard_item.active {
+  background-color: #3818d9;
+  color: white;
+}
+.wizzard_item.active::after {
+  background-color: #3818d9; /* Колір лінії під активним елементом */
+}
+.wizzard_item.completed {
+  background-color: #3818d9;
+  color: transparent;
+  background-image: url("../../public/assets/done-wiz.png");
+  background-size: cover;
+  background-position: center;
+}
+.wizzard_item.completed::after {
+  background-color: #3818d9;
+}

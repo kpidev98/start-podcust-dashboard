@@ -1,0 +1,196 @@
+.step1_title {
+  color: #232323;
+
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 50px;
+  @media screen and (min-width: 1400px) {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+  }
+}
+.step1_divadier {
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.step1_button {
+  color: #fff;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33.056px;
+  border-radius: 44px;
+  background: #3818d9;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  margin: 0 auto;
+  display: block;
+  @media screen and (min-width: 1400px) {
+    font-size: 20px;
+    padding: 12px 45px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 18px;
+    padding: 10px 40px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 16px;
+    padding: 10px 40px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 7px 25px;
+  }
+}
+.step1_select_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.select_icon {
+  fill: black;
+}
+
+.select_button_icon_top {
+  transform: rotate(90deg);
+}
+.select_button_icon_down {
+  transform: rotate(-90deg);
+}
+.custom_select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 250px;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  @media screen and (min-width: 1400px) {
+    width: 400px;
+    margin-bottom: 35px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    width: 350px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 350px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    width: 350px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    width: 350px;
+  }
+}
+.step1_select {
+  appearance: none;
+  border-radius: 44px;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+  border: 1.93px solid #dfeaf2;
+  transition: box-shadow 300ms ease;
+  outline: none;
+  padding: 10px 40px;
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  @media screen and (min-width: 1400px) {
+    padding: 20px 60px;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    padding: 20px 60px;
+    font-size: 16px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    padding: 20px 60px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    padding: 20px 60px;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    padding: 20px 60px;
+    font-size: 14px;
+  }
+}
+.custom_select_arrow {
+  position: absolute;
+  top: 48%;
+  right: 20px;
+
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+  transition: border-color 300ms ease;
+  @media screen and (min-width: 1400px) {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    transition: border-color 300ms ease;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    transition: border-color 300ms ease;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    transition: border-color 300ms ease;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    transition: border-color 300ms ease;
+  }
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #333;
+    transition: border-color 300ms ease;
+  }
+}
+
+.step1_select:hover .custom_select_arrow,
+.step1_select:focus .custom_select_arrow {
+  border-top-color: #555;
+}

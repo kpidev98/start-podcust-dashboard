@@ -1,0 +1,157 @@
+.burgerMenu {
+  position: relative;
+  @media screen and (min-width: 1400px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    display: none;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    display: none;
+  }
+}
+.closeButton {
+  fill: #000;
+  position: absolute;
+  right: 5%;
+  top: 3%;
+}
+.burgerButton {
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  &:hover,
+  &:focus {
+    fill: #cd10ff;
+  }
+}
+
+.menuItems {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  border-radius: 30px;
+  background: rgb(159, 75, 248);
+  background: linear-gradient(
+    15deg,
+    rgba(159, 75, 248, 1) 5%,
+    rgba(214, 182, 246, 1) 54%,
+    rgba(240, 230, 246, 1) 100%
+  );
+  z-index: 999;
+
+  padding: 30px 20px;
+}
+
+.menu_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: #000;
+  font-weight: 800;
+
+  font-size: 18px;
+
+  cursor: pointer;
+  transition: transform 300ms ease;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.menu_logo {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 43.944px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 50px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.menu_call {
+  margin-top: 20px;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 44px;
+  background: transparent;
+  border: 1px solid #1c08ff;
+  width: 200px;
+  transition: transform 300ms ease;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+.closeButton {
+  background: transparent;
+  border: none;
+}
+.button_close {
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.button_close:hover,
+.button_close:focus {
+  transform: scale(1.1);
+}
+.link_signin_dashboard {
+  text-decoration: none;
+  color: #000;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 44px;
+  background: transparent;
+  border: 1px solid #1c08ff;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 23px;
+  transition: transform 300ms ease;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+.menu_links_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 23px;
+  justify-content: center;
+}
+.menu_links_sign {
+  margin-top: 28px;
+}

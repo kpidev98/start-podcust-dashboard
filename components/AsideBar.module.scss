@@ -1,0 +1,77 @@
+.sidebar_container {
+  display: flex;
+  flex-direction: row;
+}
+.navigation_link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 25px;
+  font-style: normal;
+
+  font-weight: 900;
+  line-height: normal;
+  transition: color 0.3s ease;
+
+  @media screen and (min-width: 1400px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1399px) {
+    font-size: 42px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 36px;
+  }
+}
+
+.navigation_link:hover {
+  color: #2d60ff;
+}
+.sidebar_logo_container {
+  margin-bottom: 60px;
+}
+.sidebar {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding: 18px 40px;
+  transition: all 300ms ease;
+  border-right: 1px solid #e6eff5;
+}
+@media screen and (min-height: 100vh) {
+  .sidebar {
+    min-height: 100%; /* Висота 100%, якщо сусідній контейнер вищий */
+  }
+}
+.sidebar_link {
+  font-size: 18px;
+
+  font-weight: 500;
+  line-height: 29.05px;
+  color: #949292;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+.sidebar_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 35px;
+}
+.sidebar_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.navigation_icon {
+  fill: #949292;
+  transition: fill 300ms ease;
+}
+.sidebar_items:hover .navigation_icon {
+  fill: #2d60ff;
+}
+.sidebar_items:hover .sidebar_link {
+  color: #2d60ff;
+}

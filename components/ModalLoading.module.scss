@@ -1,0 +1,22 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Забезпечте, що модальне вікно знаходиться поверх усього іншого контенту */
+}
+
+.modalContent {
+  background-color: transparent; /* Фон модального вікна */
+  padding: 20px;
+}
+.loading_text {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
