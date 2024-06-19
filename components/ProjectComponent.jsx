@@ -210,7 +210,6 @@ function ProjectComponenet() {
           )}
         </div>
       </div>
-      //{" "}
     </MemberstackProtected>
   );
 }

@@ -428,7 +428,6 @@ function Wizzard() {
         ],
       };
 
-      // Об'єкт requestDataWithExternalLinks з усіма полями та external_links, якщо formData.links не порожній рядок
       const requestDataWithExternalLinks = {
         ...requestData,
         external_links: formData.links,
@@ -437,7 +436,7 @@ function Wizzard() {
         Array.isArray(formData.links) &&
         formData.links.length > 0 &&
         formData.links.every((link) => link.trim() !== "");
-      // Перевірка, чи formData.links не порожній рядок перед відправкою POST-запиту
+
       const postData = hasValidExternalLinks
         ? requestDataWithExternalLinks
         : requestData;
