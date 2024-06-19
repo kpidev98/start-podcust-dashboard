@@ -85,132 +85,133 @@ function ProjectComponenet() {
     router.push("https://www.indiev.org/access-denied");
   };
   return (
-    // <MemberstackProtected
-    //   allow={{
-    //     plans: [
-    //       "pln_basic-plan-1515l09dz",
-    //       "pln_basic-plan-year-r819b0w7b",
-    //       "pln_one-time-video-tj18d0xcj",
-    //       "pln_pro-plan-nx1960wm1",
-    //       "pln_pro-plan-year-gl19d0whp",
-    //       "pln_ultimate-plan-de15n090q",
-    //       "pln_ultimate-plan-year-d819f0w1u",
-    //     ],
-    //   }}
-    //   onUnauthorized={unathorizedRedirect}
-    // >
-    <div className={styles.flex_container}>
-      <div className={styles.asidebar_container}>
-        <AsideBar />
-      </div>
-      <div className={styles.full_width}>
-        <div className={styles.header_container}>
-          <h1 className={`${styles.header_container_text} ${inter.className}`}>
-            Projects
-          </h1>
-          <div className={styles.dashboard_burger_container}>
-            <DashboardBurgerMenu />
-          </div>
+    <MemberstackProtected
+      allow={{
+        plans: [
+          "pln_startup-h07f0gob",
+          "pln_weekly-va6j01w1",
+          "pln_boost-cw7h0gp5",
+        ],
+      }}
+      onUnauthorized={unathorizedRedirect}
+    >
+      <div className={styles.flex_container}>
+        <div className={styles.asidebar_container}>
+          <AsideBar />
         </div>
-        <div className={`${styles.project_links_container} ${inter.className}`}>
+        <div className={styles.full_width}>
+          <div className={styles.header_container}>
+            <h1
+              className={`${styles.header_container_text} ${inter.className}`}
+            >
+              Projects
+            </h1>
+            <div className={styles.dashboard_burger_container}>
+              <DashboardBurgerMenu />
+            </div>
+          </div>
           <div
-            className={`${styles.project_container_first} ${styles.project_container_first_mobile}`}
+            className={`${styles.project_links_container} ${inter.className}`}
           >
-            <Link href="#" className={styles.project_link_all}>
-              All projects
-            </Link>
-            <div>
-              <form
-                onSubmit={handleSubmit}
-                className={styles.project_input_form}
+            <div
+              className={`${styles.project_container_first} ${styles.project_container_first_mobile}`}
+            >
+              <Link href="#" className={styles.project_link_all}>
+                All projects
+              </Link>
+              <div>
+                <form
+                  onSubmit={handleSubmit}
+                  className={styles.project_input_form}
+                >
+                  <div className={styles.project_search_icon_container}>
+                    <button
+                      className={styles.project_search_button}
+                      type="submit"
+                    >
+                      <div>
+                        <svg
+                          className={styles.navigation_icon}
+                          width="20"
+                          height="20"
+                        >
+                          <use href="/assets/icons.svg#icon-search"></use>
+                        </svg>
+                      </div>
+                    </button>
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      value={searchTerm}
+                      onChange={handleChange}
+                      className={styles.project_search_input}
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className={styles.project_container_first}>
+              <select
+                className={styles.project_select_filter}
+                onChange={(event) => handleStatusSelect(event.target.value)}
               >
-                <div className={styles.project_search_icon_container}>
-                  <button
-                    className={styles.project_search_button}
-                    type="submit"
-                  >
-                    <div>
+                <option value="">All Statuses</option>
+                {statuses.map((status) => (
+                  <option key={status} value={status}>
+                    {status}
+                  </option>
+                ))}
+              </select>
+              <Link href="/newproject" className={styles.project_link_new}>
+                New Project
+              </Link>
+            </div>
+          </div>
+          {projects.length > 0 && (
+            <>
+              <ul className={styles.card}>
+                {filterData?.map((project) => (
+                  <ProjectCard key={project._id} project={project} />
+                ))}
+              </ul>
+              <div className={styles.blog_pagination_container}>
+                <ReactPaginate
+                  containerClassName={styles.blog_pagination}
+                  activeClassName={styles.blog_pagination_active}
+                  pageClassName={styles.blog_pagination_item}
+                  onPageChange={(event) => setPage(event.selected)}
+                  breakLabel="..."
+                  pageCount={Math.ceil(projects.length / n)}
+                  previousLabel={
+                    <div className={styles.blog_container_icon}>
                       <svg
-                        className={styles.navigation_icon}
-                        width="20"
-                        height="20"
+                        className={styles.blog_icon_prev}
+                        width="25"
+                        height="25"
                       >
-                        <use href="/assets/icons.svg#icon-search"></use>
+                        <use href="/assets/icons.svg#icon-ctrl"></use>
                       </svg>
                     </div>
-                  </button>
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChange={handleChange}
-                    className={styles.project_search_input}
-                  />
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className={styles.project_container_first}>
-            <select
-              className={styles.project_select_filter}
-              onChange={(event) => handleStatusSelect(event.target.value)}
-            >
-              <option value="">All Statuses</option>
-              {statuses.map((status) => (
-                <option key={status} value={status}>
-                  {status}
-                </option>
-              ))}
-            </select>
-            <Link href="/newproject" className={styles.project_link_new}>
-              New Project
-            </Link>
-          </div>
+                  }
+                  nextLabel={
+                    <div className={styles.blog_container_icon}>
+                      <svg
+                        className={styles.blog_icon_next}
+                        width="25"
+                        height="25"
+                      >
+                        <use href="/assets/icons.svg#icon-ctrl"></use>
+                      </svg>
+                    </div>
+                  }
+                />
+              </div>
+            </>
+          )}
         </div>
-        {projects.length > 0 && (
-          <>
-            <ul className={styles.card}>
-              {filterData?.map((project) => (
-                <ProjectCard key={project._id} project={project} />
-              ))}
-            </ul>
-            <div className={styles.blog_pagination_container}>
-              <ReactPaginate
-                containerClassName={styles.blog_pagination}
-                activeClassName={styles.blog_pagination_active}
-                pageClassName={styles.blog_pagination_item}
-                onPageChange={(event) => setPage(event.selected)}
-                breakLabel="..."
-                pageCount={Math.ceil(projects.length / n)}
-                previousLabel={
-                  <div className={styles.blog_container_icon}>
-                    <svg
-                      className={styles.blog_icon_prev}
-                      width="25"
-                      height="25"
-                    >
-                      <use href="/assets/icons.svg#icon-ctrl"></use>
-                    </svg>
-                  </div>
-                }
-                nextLabel={
-                  <div className={styles.blog_container_icon}>
-                    <svg
-                      className={styles.blog_icon_next}
-                      width="25"
-                      height="25"
-                    >
-                      <use href="/assets/icons.svg#icon-ctrl"></use>
-                    </svg>
-                  </div>
-                }
-              />
-            </div>
-          </>
-        )}
       </div>
-    </div>
-    // </MemberstackProtected>
+      //{" "}
+    </MemberstackProtected>
   );
 }
 

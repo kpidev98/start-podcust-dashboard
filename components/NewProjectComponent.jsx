@@ -17,13 +17,9 @@ const NewProjectComponent = () => {
     <MemberstackProtected
       allow={{
         plans: [
-          "pln_basic-plan-1515l09dz",
-          "pln_basic-plan-year-r819b0w7b",
-          "pln_one-time-video-tj18d0xcj",
-          "pln_pro-plan-nx1960wm1",
-          "pln_pro-plan-year-gl19d0whp",
-          "pln_ultimate-plan-de15n090q",
-          "pln_ultimate-plan-year-d819f0w1u",
+          "pln_startup-h07f0gob",
+          "pln_weekly-va6j01w1",
+          "pln_boost-cw7h0gp5",
         ],
       }}
       onUnauthorized={unathorizedRedirect}
