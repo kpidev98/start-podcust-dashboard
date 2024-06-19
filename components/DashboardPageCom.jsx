@@ -46,47 +46,45 @@ const DashboardComponent = () => {
   };
 
   return (
-    <>
-      <MemberstackProtected
-        allow={{
-          plans: [
-            "pln_startup-h07f0gob",
-            "pln_weekly-va6j01w1",
-            "pln_boost-cw7h0gp5",
-          ],
-        }}
-        onUnauthorized={unathorizedRedirect}
-      >
-        <div className={styles.flex_container}>
-          <div className={styles.asidebar_container}>
-            <AsideBar />
-          </div>
-          <div className={styles.full_width}>
-            <div className={styles.header_container}>
-              <h1
-                className={`${styles.header_container_text} ${inter.className}`}
-              >
-                Dashboard
-              </h1>
+    <MemberstackProtected
+      allow={{
+        plans: [
+          "pln_startup-h07f0gob",
+          "pln_weekly-va6j01w1",
+          "pln_boost-cw7h0gp5",
+        ],
+      }}
+      onUnauthorized={unathorizedRedirect}
+    >
+      <div className={styles.flex_container}>
+        <div className={styles.asidebar_container}>
+          <AsideBar />
+        </div>
+        <div className={styles.full_width}>
+          <div className={styles.header_container}>
+            <h1
+              className={`${styles.header_container_text} ${inter.className}`}
+            >
+              Dashboard
+            </h1>
 
-              <div className={styles.dashboard_burger_container}>
-                <button
-                  ref={buttonRef}
-                  onClick={handleProfileButtonClick}
-                  className={styles.profile_button}
-                ></button>
-                <DashboardBurgerMenu />
-              </div>
+            <div className={styles.dashboard_burger_container}>
+              <button
+                ref={buttonRef}
+                onClick={handleProfileButtonClick}
+                className={styles.profile_button}
+              ></button>
+              <DashboardBurgerMenu />
             </div>
           </div>
         </div>
-        {isModalOpen && (
-          <div ref={modalRef}>
-            <ProfileModalComponent />
-          </div>
-        )}
-      </MemberstackProtected>
-    </>
+      </div>
+      {isModalOpen && (
+        <div ref={modalRef}>
+          <ProfileModalComponent />
+        </div>
+      )}
+    </MemberstackProtected>
   );
 };
 
