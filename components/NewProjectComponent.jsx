@@ -3,6 +3,7 @@ import AsideBar from "@/components/AsideBar";
 import styles from "./NewProjectComponent.module.scss";
 import Wizzard from "@/components/wizzard/Wizzard";
 import DashboardBurgerMenu from "@/components/DashboardMenu";
+import { inter } from "@/app/fonts";
 import {
   useMemberstack,
   MemberstackProtected,
@@ -30,7 +31,11 @@ const NewProjectComponent = () => {
         </div>
         <div className={styles.full_width}>
           <div className={styles.header_container}>
-            <h1 className={styles.header_container_text}>Project</h1>
+            <h1
+              className={`${styles.header_container_text} ${inter.className}`}
+            >
+              Project
+            </h1>
             <div className={styles.dashboard_burger_container}>
               <DashboardBurgerMenu />
             </div>
