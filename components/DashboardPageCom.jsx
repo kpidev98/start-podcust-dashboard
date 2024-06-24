@@ -51,7 +51,7 @@ const DashboardComponent = () => {
         plans: [
           "pln_startup-h07f0gob",
           "pln_weekly-va6j01w1",
-          "pln_boost-cw7h0gp5",
+          "pln_boost-o7zl0cuh",
         ],
       }}
       onUnauthorized={unathorizedRedirect}
