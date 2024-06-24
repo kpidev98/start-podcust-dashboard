@@ -38,7 +38,7 @@ const DashboardComponent = () => {
   }, [isModalOpen]);
 
   const unathorizedRedirect = () => {
-    router.push("https://www.indiev.org/access-denied");
+    router.push("https://www.start-podcast.com/access-denied");
   };
 
   const handleProfileButtonClick = () => {

@@ -32,7 +32,7 @@ const ProfileModalComponent = () => {
   const userEmail = user?.auth.email;
   const handleSignOut = () => {
     signOut();
-    router.push("https://www.indiev.org/sign-in");
+    router.push("https://www.start-podcast.com/log-in");
   };
 
   const handleManageAccount = () => {
