@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 const NewProjectComponent = () => {
   const router = useRouter();
   const unathorizedRedirect = () => {
-    router.push("https://www.indiev.org/access-denied");
+    router.push("https://www.start-podcast.com/acces-denied");
   };
   return (
     <MemberstackProtected

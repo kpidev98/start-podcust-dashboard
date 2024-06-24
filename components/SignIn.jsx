@@ -14,7 +14,7 @@ function SignIn() {
   };
 
   const handleClose = () => {
-    router.push("https://www.indiev.org/access-denied");
+    router.push("https://www.start-podcast.com/acces-denied");
   };
 
   return (
