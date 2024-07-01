@@ -87,7 +87,7 @@ export async function POST(req, res) {
           }
           try {
             const info = await transporter.sendMail({
-              from: "inbox@indiev.org",
+              from: "inbox@start-podcast.com",
               to: `${email}`,
               subject: `New Comment on Your Project ${storyName} `,
               text: `Dear${userName},
@@ -107,7 +107,7 @@ export async function POST(req, res) {
             </p>
             <p style="font-size: 16px; color: #333;">
               Warm regards,<br>
-              The INDIEV Team
+              The Start Podcast Team
             </p>`,
             });
             console.log("Message comment sent: %s", info.messageId);
@@ -187,58 +187,58 @@ export async function POST(req, res) {
             switch (newState) {
               case "Draft":
                 subject = `New Project Alert! Your Project "${projectDbName}" Is in the Draft Phase!`;
-                textMessage = `Dear ${custumerName}, Your project "${projectDbName}" is currently in the draft phase. Feel free to make any adjustments or add details as you see fit. When you're ready, send it over to us for the next steps!\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>Your project "${projectDbName}" is currently in the draft phase. Feel free to make any adjustments or add details as you see fit. When you're ready, send it over to us for the next steps!</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName}, Your project "${projectDbName}" is currently in the draft phase. Feel free to make any adjustments or add details as you see fit. When you're ready, send it over to us for the next steps!\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>Your project "${projectDbName}" is currently in the draft phase. Feel free to make any adjustments or add details as you see fit. When you're ready, send it over to us for the next steps!</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "To do":
                 subject = `New Project Alert! "${projectDbName}" Has Moved to To Do`;
-                textMessage = `Dear ${custumerName},\nGreat news! "${projectDbName}" is now on our To Do list. Our team will be assigning a project manager to kickstart the work soon.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>Great news! "${projectDbName}" is now on our To Do list. Our team will be assigning a project manager to kickstart the work soon.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\nGreat news! "${projectDbName}" is now on our To Do list. Our team will be assigning a project manager to kickstart the work soon.\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>Great news! "${projectDbName}" is now on our To Do list. Our team will be assigning a project manager to kickstart the work soon.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Source Check":
                 subject = `New Project Alert! Editing Phase for "${projectDbName}"`;
-                textMessage = `Dear ${custumerName},\n"${projectDbName}" is in the Source Check stage. Our editors are working their magic to enhance your project.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is in the Source Check stage. Our editors are working their magic to enhance your project.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\n"${projectDbName}" is in the Source Check stage. Our editors are working their magic to enhance your project.\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is in the Source Check stage. Our editors are working their magic to enhance your project.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Waiting for additional sources":
                 subject = `New Project Alert! "${projectDbName}" Awaits Your Inputs`;
-                textMessage = `Dear ${custumerName},\n"${projectDbName}" needs a bit more to go forward. Could you provide the additional sources or information required?\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" needs a bit more to go forward. Could you provide the additional sources or information required?</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\n"${projectDbName}" needs a bit more to go forward. Could you provide the additional sources or information required?\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" needs a bit more to go forward. Could you provide the additional sources or information required?</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Draft in progress":
                 subject = `New Project Alert! Crafting Your Project "${projectDbName}"`;
-                textMessage = `Dear ${custumerName},\nYour project "${projectDbName}" is being edited. Our team is diligently shaping the initial draft.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>Your project "${projectDbName}" is being edited. Our team is diligently shaping the initial draft.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\nYour project "${projectDbName}" is being edited. Our team is diligently shaping the initial draft.\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>Your project "${projectDbName}" is being edited. Our team is diligently shaping the initial draft.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Art Director Riview":
                 subject = `New Project Alert! "${projectDbName}" Under Art Director’s Eye`;
-                textMessage = `Dear ${custumerName},\n"${projectDbName}" is currently being reviewed by our art director. We're ensuring everything looks perfect!\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is currently being reviewed by our art director. We're ensuring everything looks perfect!</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\n"${projectDbName}" is currently being reviewed by our art director. We're ensuring everything looks perfect!\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is currently being reviewed by our art director. We're ensuring everything looks perfect!</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Editing":
                 subject = `New Project Alert! Editing Phase for "${projectDbName}"`;
-                textMessage = `Dear ${custumerName},\n"${projectDbName}" is in the editing stage. Our editors are working their magic to enhance your project.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is in the editing stage. Our editors are working their magic to enhance your project.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\n"${projectDbName}" is in the editing stage. Our editors are working their magic to enhance your project.\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is in the editing stage. Our editors are working their magic to enhance your project.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Client Review":
                 subject = `New Project Alert! Your Feedback Awaited for "${projectDbName}"`;
-                textMessage = `Dear ${custumerName},\n"${projectDbName}" is ready for your review. Please take a look and let us know your thoughts.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is ready for your review. Please take a look and let us know your thoughts.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\n"${projectDbName}" is ready for your review. Please take a look and let us know your thoughts.\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is ready for your review. Please take a look and let us know your thoughts.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Polishing":
                 subject = `New Project Alert! Polishing Your Project "${projectDbName}"`;
                 textMessage = `Dear ${custumerName},\nBased on your feedback, "${projectDbName}" is being polished to perfection. We're almost there!\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>Based on your feedback, "${projectDbName}" is being polished to perfection. We're almost there!</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>Based on your feedback, "${projectDbName}" is being polished to perfection. We're almost there!</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Client Final Review":
                 subject = `New Project Alert! Final Review Call for "${projectDbName}"`;
                 textMessage = `Dear ${custumerName},\n"${projectDbName}" is in its final review phase. Please confirm everything is to your satisfaction.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is in its final review phase. Please confirm everything is to your satisfaction.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>"${projectDbName}" is in its final review phase. Please confirm everything is to your satisfaction.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               case "Done":
                 subject = `New Project Alert! "${projectDbName}" Is Ready!`;
-                textMessage = `Dear ${custumerName},\nExciting news! "${projectDbName}" is complete. It’s ready for the world to see. The final project files are available for download.\nWarm regards,\nThe INDIEV Team`;
-                htmlMessage = `<p>Dear ${custumerName},</p><p>Exciting news! "${projectDbName}" is complete. It’s ready for the world to see. The final project files are available for download.</p><p>Warm regards,<br>The INDIEV Team</p>`;
+                textMessage = `Dear ${custumerName},\nExciting news! "${projectDbName}" is complete. It’s ready for the world to see. The final project files are available for download.\nWarm regards,\nThe Start Podcast Team`;
+                htmlMessage = `<p>Dear ${custumerName},</p><p>Exciting news! "${projectDbName}" is complete. It’s ready for the world to see. The final project files are available for download.</p><p>Warm regards,<br>The Start Podcast Team</p>`;
                 break;
               default:
                 // Handle unknown status
@@ -246,7 +246,7 @@ export async function POST(req, res) {
             }
 
             const info = await transporter.sendMail({
-              from: "inbox@indiev.org", // sender address
+              from: "inbox@start-podcast.com", // sender address
               to: `${custumerEmail}`,
               subject: subject,
               text: textMessage,

@@ -78,17 +78,17 @@ export async function POST(req) {
         });
         console.log("member created");
         const info = await transporter.sendMail({
-          from: "inbox@indiev.org", // sender address
+          from: "inbox@start-podcast.com", // sender address
           to: `${auth.email}`,
-          subject: `Welcome to INDIEV! Your Account Is Ready`,
+          subject: `Welcome to Start Podcast! Your Account Is Ready`,
           text: `Dear ${customFields["first-name"]},
-          Thrilled to have you on board! Your INDIEV account is set up and ready to go. You're now closer than ever to unlocking all we have to offer. Feel free to dive in and create your first task today. We can't wait to see the amazing projects you'll bring to life.
+          Thrilled to have you on board! Your Start Podcast account is set up and ready to go. You're now closer than ever to unlocking all we have to offer. Feel free to dive in and create your first task today. We can't wait to see the amazing projects you'll bring to life.
           Warm regards,
-          The INDIEV Team
+          The Start Podcast  Team
           `,
           html: `<p>Dear ${customFields["first-name"]},</p>
-          <p>Thrilled to have you on board! Your INDIEV account is set up and ready to go. You're now closer than ever to unlocking all we have to offer. Feel free to dive in and create your first task today. We can't wait to see the amazing projects you'll bring to life.</p>
-          <p>Warm regards <br>The INDIEV Team</p>
+          <p>Thrilled to have you on board! Your Start Podcast account is set up and ready to go. You're now closer than ever to unlocking all we have to offer. Feel free to dive in and create your first task today. We can't wait to see the amazing projects you'll bring to life.</p>
+          <p>Warm regards <br>The Start Podcast Team</p>
         `,
         });
         console.log("Message sent: %s", info.messageId);
