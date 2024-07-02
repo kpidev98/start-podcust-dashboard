@@ -472,7 +472,7 @@ function Wizzard() {
       if (responsedb.status === 200) {
         setFinalLoading(false);
         toast.success("Thank you  project was created");
-        router.push("/dashboard/projects", { scroll: false });
+        router.push("/projects", { scroll: false });
       } else {
         setFinalLoading(false);
         toast.error("Faild to create project, try again please");
