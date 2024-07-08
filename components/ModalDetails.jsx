@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./ModalDetails.module.scss";
 import { toast } from "sonner";
+import { mulish } from "../app/fonts";
 import { ColorRing } from "react-loader-spinner";
 import renderIcon from "@/utils/renderIcon";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
@@ -372,7 +373,7 @@ const ModalDetails = ({ isOpenDetails, onCloseDetails, project }) => {
 
   return (
     <div className={styles.overlay}>
-      <div className={styles.modal}>
+      <div className={`${styles.modal} ${mulish.className}`}>
         <button className={styles.closeButton} onClick={onCloseDetails}>
           &times;
         </button>
