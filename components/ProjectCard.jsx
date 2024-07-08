@@ -5,6 +5,7 @@ import styles from "./ProjectCard.module.scss";
 import ModalDetails from "./ModalDetails";
 import { Tooltip } from "react-tooltip";
 import ModalEdit from "./EditModal";
+import ModalDeleteConfirmation from "./ModalDeleteConfirmation";
 
 import axios from "axios";
 import { toast } from "sonner";
@@ -17,6 +18,8 @@ function ProjectCard({ project }) {
   const [isModalOpenDetails, setIsModalOpenDetails] = useState(false);
   const [isModalOpenEdit, setIsModalOpenEdit] = useState(false);
   const [isModalOpenUpload, setIsModalOpenUpload] = useState(false);
+  const [isModalOpenDelete, setIsModalOpenDelete] = useState(false);
+
   const changeColor = (value) => {
     let newColor, newBackColor, newBorderColor;
 
@@ -116,6 +119,7 @@ function ProjectCard({ project }) {
       });
       if (responsedb.status === 200) {
         console.log("success");
+
         toast.success("Project  deleted");
         window.location.reload();
       } else {
@@ -184,7 +188,7 @@ function ProjectCard({ project }) {
                 className={styles.delete_project_button}
                 onClick={(e) => {
                   e.stopPropagation(); // Зупиняє подальше поширення події
-                  handleDeletestory(); // Викликає функцію для видалення проекту
+                  setIsModalOpenDelete(true); // Відкриває модальне вікно підтвердження видалення
                 }}
               >
                 <svg
@@ -214,6 +218,11 @@ function ProjectCard({ project }) {
         isOpenEdit={isModalOpenEdit}
         onCloseEdit={() => setIsModalOpenEdit(false)}
         project={project}
+      />
+      <ModalDeleteConfirmation
+        isOpen={isModalOpenDelete}
+        onClose={() => setIsModalOpenDelete(false)}
+        onDelete={handleDeletestory}
       />
     </>
   );

@@ -32,7 +32,7 @@ function Step8({
   minSelectableDate.setDate(today.getDate() + 3);
 
   return (
-    <div className={mulish}>
+    <div className={mulish.className}>
       <h2 className={styles.step7_title}>Deadline</h2>
       <div className={styles.step7_calendar_container}>
         <Calendar
